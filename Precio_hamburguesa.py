@@ -1,4 +1,4 @@
-# Definir costos de ingredientes (por hamburguesa)
+# Definir costos de ingredientes / Define ingredient costs
 costos_ingredientes = {
     "pan": 10.00,
     "carne": 30.00,
@@ -9,8 +9,8 @@ costos_ingredientes = {
     "salsa": 5.00
 }
 
-# Definir otros costos asociados (por hamburguesa, en promedio)
-costos_operativos = {
+# Definir otros costos asociados / Define other associated costs
+costos_fijos = {
     "mano_de_obra": 20.00,
     "electricidad": 6.00,
     "renta": 10.00,
@@ -18,14 +18,14 @@ costos_operativos = {
     "marketing": 3.00
 }
 
-# Calcular el costo total
+# Calcular el costo total / Calculate the total cost
 def calcular_precio_hamburguesa():
     costo_ingredientes = sum(costos_ingredientes.values())
-    costo_operativo = sum(costos_operativos.values())
-    costo_total = costo_ingredientes + costo_operativo
+    costo_fijo = sum(costos_fijos.values())
+    costo_total = costo_ingredientes + costo_fijo
     
     return costo_total
 
-# Mostrar el precio de la hamburguesa
+# Mostrar el precio de la hamburguesa / Show the price of the hamburger
 precio = calcular_precio_hamburguesa()
 print(f"El precio final de la hamburguesa es: ${precio:.2f} MXN")
